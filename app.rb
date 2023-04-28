@@ -13,11 +13,16 @@ set background: Image.new(
 
 set title: 'Rescue Your Farm – An action-packed gaming experience!'
 
+@zombie_plant = Enemy::ZombiePlant.new
+
 # Register 'mouse down' event.
 on :mouse_down do
-  @zombie_plant = Enemy::ZombiePlant.new
+  plant = @zombie_plant.actor
 
-  @zombie_plant.draw
+  if plant.nil?
+    @zombie_plant.draw
+    @zombie_plant.descend
+  end
 end
 
 # Start the game.
