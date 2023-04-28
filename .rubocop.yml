@@ -16,3 +16,9 @@ Metrics/MethodLength:
 
 Metrics/ModuleLength:
   CountAsOne: ['array', 'hash', 'heredoc', 'method_call']
+
+RSpec/ExampleLength:
+  CountAsOne: [ 'array', 'hash', 'heredoc', 'method_call' ]
+
+RSpec/MessageSpies:
+  EnforcedStyle: receive
