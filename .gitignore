@@ -1,0 +1,8 @@
+# MacOS Finder files
+.DS_Store
+
+# Debug history
+.byebug_history
+
+# Rubymine Editor
+.idea
