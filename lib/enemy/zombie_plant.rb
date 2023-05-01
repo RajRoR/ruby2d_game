@@ -8,10 +8,20 @@ class Enemy
       super(width: 125, height: 125, image: 'assets/zombie-plant.png')
     end
 
+    # Plot an enemy actor and start it's descend.
+    #
+    # @return [void]
+    def plot
+      draw
+      descend
+    end
+
+    private
+
     # Move the plant towards bottom of the screen.
     #
     # @return [void]
-    def descend(&proc)
+    def descend
       x_direction = [-1, 1].sample
 
       x_limit = Window.width - width
@@ -20,7 +30,7 @@ class Enemy
       Window.update do
         actor.x += x_direction if actor.x.positive? && actor.x < x_limit
 
-        # yield unless actor.y < y_limit
+        next unless actor.y < y_limit # Handing the callback
 
         actor.y += 1
       end

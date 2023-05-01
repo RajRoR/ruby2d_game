@@ -2,8 +2,8 @@
 
 require_relative 'dependencies'
 
-set width: 1200
-set height: 900
+set width: 800
+set height: 600
 
 set background: Image.new(
   'assets/background.jpg',
@@ -16,15 +16,19 @@ set title: 'Rescue Your Farm – An action-packed gaming experience!'
 @zombie_plant = Enemy::ZombiePlant.new
 
 # Register 'mouse down' event.
-on :mouse_down do
+on :mouse_down do |event|
   plant = @zombie_plant.actor
 
   if plant.nil?
-    @zombie_plant.draw
-    @zombie_plant.descend
+    @zombie_plant.plot
+  elsif plant.contains?(event.x, event.y)
+    @zombie_plant.destroy
+
+    @zombie_plant = Enemy::ZombiePlant.new
+    @zombie_plant.plot
   end
 end
 
-# Start the game.
+# Start the game!!!
 @game = Game.new
 @game.start

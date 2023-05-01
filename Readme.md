@@ -27,7 +27,7 @@ ruby app.rb
 ### If you are contributing, ensure that you have installed the below-mentioned gems, besides the preceding dependencies:
 1. [RSpec](https://github.com/rspec/rspec-core)
 1. [Rubocop](https://github.com/rubocop/rubocop) & [Rubocop-RSpec](https://github.com/rubocop/rubocop-rspec)
-1. [Byebug](https://github.com/deivid-rodriguez/byebug)
+1. [Pry](https://github.com/pry/pry)
 
 
 Get ready for a thrilling experience and help rescue your farm from the clutches of the zombie plants!

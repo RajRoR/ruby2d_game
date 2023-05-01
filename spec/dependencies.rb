@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'rspec'
-require 'byebug'
+require 'pry'
 
-# Require all files from 'lib' folder.
-Dir['./../lib/*.rb'].sort.each { |file| require file }
+# Require all other dependencies.
+require './dependencies'

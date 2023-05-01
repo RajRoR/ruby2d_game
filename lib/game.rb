@@ -16,8 +16,6 @@ class Game
   #
   # @return [void]
   def over
-    clear
-
     Rectangle.new(width: Window.width, height: Window.height, opacity: 70, color: 'teal', z: 10)
 
     Text.new('Game Over...', color: 'white', x: ((Window.width / 2) - 150), y: 150, size: 50, z: 11)

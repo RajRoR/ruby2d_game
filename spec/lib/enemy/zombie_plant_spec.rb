@@ -7,14 +7,12 @@ describe Enemy::ZombiePlant do
 
   describe '#descend' do
     it 'updates the plant position' do
-      zombie_plant.draw
-      zombie_plant.descend
-
+      zombie_plant.plot
       plant = zombie_plant.actor
 
-      expect {
+      expect do
         Window.current.update_callback
-      }.to change(plant, :x).and(change(plant, :y))
+      end.to change(plant, :x).and(change(plant, :y))
     end
   end
 end
