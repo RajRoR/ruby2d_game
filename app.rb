@@ -23,6 +23,7 @@ on :mouse_down do |event|
     @zombie_plant.plot { zombie_plant_immuned }
   elsif plant.contains?(event.x, event.y)
     @zombie_plant.destroy
+    @game.update_score
 
     plot_zombie_plant
   end
@@ -37,6 +38,7 @@ end
 # Acts as a callback.
 def zombie_plant_immuned
   @zombie_plant.immune
+  @game.update_lives
 
   plot_zombie_plant
 end
