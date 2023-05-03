@@ -44,7 +44,15 @@ class Game
     Rectangle.new(width: Window.width, height: Window.height, opacity: 70, color: 'teal', z: 10)
 
     Text.new('Game Over...', color: 'white', x: ((Window.width / 2) - 150), y: 150, size: 50, z: 11)
-    Text.new('Your Score: 0', color: 'white', x: ((Window.width / 2) - 100), y: 220, size: 30, z: 11)
+
+    Text.new(
+      "Your Score: #{@score_board.score}",
+      color: 'white',
+      x: ((Window.width / 2) - 100),
+      y: 220,
+      size: 30,
+      z: 11
+    )
   end
 
   # Start background music on loop.
