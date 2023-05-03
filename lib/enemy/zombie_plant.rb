@@ -11,9 +11,15 @@ class Enemy
     # Plot an enemy actor and start it's descend.
     #
     # @return [void]
-    def plot
+    def plot(&block)
       draw
-      descend
+      descend(&block)
+    end
+
+    def immune
+      super
+
+      Sound.new('assets/immune.mp3').play
     end
 
     private
@@ -30,7 +36,7 @@ class Enemy
       Window.update do
         actor.x += x_direction if actor.x.positive? && actor.x < x_limit
 
-        next unless actor.y < y_limit # Handing the callback
+        yield unless actor.y < y_limit # Handing the callback
 
         actor.y += 1
       end

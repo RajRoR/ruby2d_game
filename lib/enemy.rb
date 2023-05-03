@@ -51,6 +51,9 @@ class Enemy
     actor.play animation: :fly, loop: true
   end
 
+  protected
+
+  # Increase the actor's size by 40%
   def immune
     actor.height *= 1.4
     actor.width *= 1.4

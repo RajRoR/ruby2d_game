@@ -20,13 +20,25 @@ on :mouse_down do |event|
   plant = @zombie_plant.actor
 
   if plant.nil?
-    @zombie_plant.plot
+    @zombie_plant.plot { zombie_plant_immuned }
   elsif plant.contains?(event.x, event.y)
     @zombie_plant.destroy
 
-    @zombie_plant = Enemy::ZombiePlant.new
-    @zombie_plant.plot
+    plot_zombie_plant
   end
+end
+
+def plot_zombie_plant
+  @zombie_plant = Enemy::ZombiePlant.new
+  @zombie_plant.plot { zombie_plant_immuned }
+end
+
+# Handle the scenario when zombie plant gets immuned.
+# Acts as a callback.
+def zombie_plant_immuned
+  @zombie_plant.immune
+
+  plot_zombie_plant
 end
 
 # Start the game!!!

@@ -15,4 +15,15 @@ describe Enemy::ZombiePlant do
       end.to change(plant, :x).and(change(plant, :y))
     end
   end
+
+  describe '#immune' do
+    it 'increases enemy size' do
+      zombie_plant.plot
+      plant = zombie_plant.actor
+
+      expect do
+        zombie_plant.immune
+      end.to change(plant, :width).to(plant.width * 1.4).and(change(plant, :height).to(plant.height * 1.4))
+    end
+  end
 end
