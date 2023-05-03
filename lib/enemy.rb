@@ -14,24 +14,6 @@ class Enemy
     @image = image
   end
 
-  # Destroy the actor
-  #
-  # @return [void]
-  def destroy
-    Sprite.new(
-      'assets/bulls-eye.png',
-      x: actor.x,
-      y: actor.y,
-      clip_width: width,
-      clip_height: height,
-      width: width,
-      height: height,
-      time: 75
-    ).play
-
-    actor.remove
-  end
-
   # Draw the enemy actor on the screen at a random position.
   #
   # @return [Sprite] the drawn actor.
@@ -52,6 +34,24 @@ class Enemy
   end
 
   protected
+
+  # Destroy the actor
+  #
+  # @return [void]
+  def destroy
+    Sprite.new(
+      'assets/bulls-eye.png',
+      x: actor.x,
+      y: actor.y,
+      clip_width: width,
+      clip_height: height,
+      width: width,
+      height: height,
+      time: 75
+    ).play
+
+    actor.remove
+  end
 
   # Increase the actor's size by 40%
   def immune

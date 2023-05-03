@@ -16,6 +16,14 @@ class Enemy
       descend(&block)
     end
 
+    # Destroy the zombie plant with sound effect.
+    def destroy
+      Sound.new('assets/lightgun.mp3').play
+
+      super
+    end
+
+    # Immune the zombie plant with sound effect.
     def immune
       super
 
