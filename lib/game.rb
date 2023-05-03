@@ -9,6 +9,9 @@ class Game
   #
   # @return [void]
   def start
+    music = Music.new('assets/scary-music.mp3.flac', loop: true)
+    music.play
+
     Window.show
   end
 
