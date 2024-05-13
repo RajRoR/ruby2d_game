@@ -15,19 +15,24 @@ Notably, these zombie plants emit a luminous glow, making them appear brighter t
 1. Fire the shot: _Mouse Click_
 
 
-## Technical Dependencies
+## Main Dependencies
 1. [Ruby](https://www.ruby-lang.org/en/)
 1. [Ruby2D](https://rubygems.org/gems/ruby2d)
+
+### Other Dependencies:
+1. [RSpec](https://github.com/rspec/rspec-core)
+1. [Rubocop](https://github.com/rubocop/rubocop) & [Rubocop-RSpec](https://github.com/rubocop/rubocop-rspec)
+1. [Pry](https://github.com/pry/pry)
+
+### Install dependencies
+```
+bundle install
+```
 
 ### Boot the Game
 ```
 ruby app.rb
 ```
-
-### If you are contributing, ensure that you have installed the below-mentioned gems, besides the preceding dependencies:
-1. [RSpec](https://github.com/rspec/rspec-core)
-1. [Rubocop](https://github.com/rubocop/rubocop) & [Rubocop-RSpec](https://github.com/rubocop/rubocop-rspec)
-1. [Pry](https://github.com/pry/pry)
 
 
 Get ready for a thrilling experience and help rescue your farm from the clutches of the zombie plants!
