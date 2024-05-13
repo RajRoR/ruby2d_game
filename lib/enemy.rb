@@ -25,9 +25,9 @@ class Enemy
       x: origin_coords[:x],
       y: origin_coords[:y],
       clip_width: width,
-      width: width,
-      height: height,
-      animations: animations
+      width:,
+      height:,
+      animations:
     )
 
     actor.play animation: :fly, loop: true
@@ -45,8 +45,8 @@ class Enemy
       y: actor.y,
       clip_width: width,
       clip_height: height,
-      width: width,
-      height: height,
+      width:,
+      height:,
       time: 75
     ).play
 
@@ -71,7 +71,7 @@ class Enemy
         { x: width, y: 0 },
         { x: 0, y: height },
         { x: width, y: height }
-      ].map { |coords| coords.merge({ width: width, height: height, time: 150 }) }
+      ].map { |coords| coords.merge({ width:, height:, time: 150 }) }
     }
   end
 

@@ -25,7 +25,7 @@ class Game
   def update_lives
     @score_board.update_lives
 
-    return over if @score_board.lives.zero?
+    over if @score_board.lives.zero?
   end
 
   # Increment score by 1.

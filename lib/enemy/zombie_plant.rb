@@ -11,9 +11,9 @@ class Enemy
     # Plot an enemy actor and start it's descend.
     #
     # @return [void]
-    def plot(&block)
+    def plot(&)
       draw
-      descend(&block)
+      descend(&)
     end
 
     # Destroy the zombie plant with sound effect.

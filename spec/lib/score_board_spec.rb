@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative './../dependencies'
+require_relative '../dependencies'
 
 describe ScoreBoard do
   subject(:score_board) { described_class.new }
